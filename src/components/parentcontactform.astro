@@ -35,18 +35,6 @@ import Button from "./ui/button.astro";
     </div>
   </div>
   <div class="mb-5">
-    <input
-      type="text"
-      placeholder="Job Title"
-      required
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
-      name="job"
-    />
-    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please provide your job title.
-    </div>
-  </div>
-  <div class="mb-5">
     <label for="email_address" class="sr-only">Email Address</label><input
       id="email_address"
       type="email"
@@ -71,18 +59,18 @@ import Button from "./ui/button.astro";
       name="website"
     />
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please provide your school's website..
+      Please provide your school's website.
     </div>
   </div>
   <div class="mb-3">
     <textarea
       name="message"
       required
-      placeholder="Please leave some more details."
+      placeholder="Your Message"
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     ></textarea>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please leave more details.
+      Please enter your message.
     </div>
   </div>
   <Button type="submit" size="lg" block>Send Request</Button>
