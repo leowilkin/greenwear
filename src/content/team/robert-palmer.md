@@ -1,5 +1,5 @@
 ---
-draft: ture
+draft: true
 name: "Robert Palmer"
 title: "Marketing Engineer"
 avatar: {
