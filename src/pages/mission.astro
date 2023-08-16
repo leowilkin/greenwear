@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="Our Mission">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Our Mission</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Empowering Futures Through Accessible Uniforms
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        At GreenWear, our mission is to empower families, refugees, and low-income households by offering affordable school uniforms, all while championing the values of sustainability and social cohesion. We are dedicated to dismantling financial barriers that hinder access to education, enabling children from diverse backgrounds to engage in learning with confidence and pride. Through our commitment to sustainability, we breathe new life into gently used uniforms, fostering a culture of responsible consumption and environmental stewardship. By weaving the fabric of social cohesion, we strengthen communities and amplify the voices of those who often go unheard. Our mission is a journey of empowerment, where affordable uniforms become the threads that weave a tapestry of equality, opportunity, and unity.
+      </p>
+    </div>
+    
+    <Sectionhead>
+        <Fragment slot="title">Vision</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+        <p class="text-lg leading-relaxed text-slate-500">
+            Our vision is a world where every child, regardless of their background, has unfettered access to quality education. We dream of a reality where economic constraints hold no power over a child's potential, and equal opportunities for success are the norm. Through our efforts at GreenWear, we aspire to erase the boundaries that limit educational prospects, ensuring that every young mind can thrive and flourish in an inclusive and nurturing learning environment.
+        </p>
+    </div>
+  </Container>
+</Layout>
