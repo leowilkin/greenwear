@@ -6,18 +6,12 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
+    title: "Home",
+    path: "/index"
+  }
   {
-    title: "Pricing",
-    path: "/pricing",
+    title: "Our Mission",
+    path: "/mission",
   },
   {
     title: "About",
@@ -39,8 +33,8 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
+          ><span class="font-bold text-green-800">Green</span><span
+            class="text-slate-500">wear</span
           >
         </a>
         <div class="block lg:hidden">
@@ -74,15 +68,15 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
+          <Link href="#" style="muted" block size="md">Schools</Link>
+          <Link href="#" size="md" block>Parents</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <a href="#">Schools</a>
+        <Link href="#" size="md">Parents</Link>
       </div>
     </div>
   </header>
